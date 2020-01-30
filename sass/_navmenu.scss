@@ -55,6 +55,11 @@
         padding: 1rem 0 3rem 0;
         border-top: 3px solid $color-grey;
 
+        @media only screen and (max-width: $bp-large) {
+            font-size: 1.1rem;
+            left: -10rem;
+        }
+
         @media only screen and (max-width: $bp-small) {
             font-size: 1.1rem;
         }

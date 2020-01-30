@@ -23,6 +23,11 @@
         @include btn;
         width: 20%;
 
+        @media only screen and (max-width: $bp-large) {
+            padding: 0.5rem 1rem;
+            width: 30%;
+        }
+
         @media only screen and (max-width: $bp-small) {
             width: 35%;
             font-size: 1.1rem;

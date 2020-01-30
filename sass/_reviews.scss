@@ -1,0 +1,31 @@
+.reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7rem;
+
+    &__title {
+        @include section;
+        margin-bottom: 0;
+    }
+
+    &__text {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__btn {
+        @include btn;
+        width: 20%;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 35%;
+        }
+    }
+
+    &__btn > a {
+        text-decoration: none;
+        color: $color-white;
+    }
+}

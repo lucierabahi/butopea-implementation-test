@@ -1,0 +1,62 @@
+.navmenu {
+    &__list {
+        height: 4rem;
+        margin: 3rem 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom: $border-btm;
+        border-top: $border-btm;
+
+        &--item {
+            list-style: none;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+
+        &--item a {
+            @include link;
+        }
+    }
+}
+
+.shop {
+    position: relative;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover .shop__content {
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
+    }
+
+    &__content {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        z-index: 10;
+        background-color: $color-white;
+
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        line-height: 2.5;
+        padding: 1rem 0 3rem 0;
+        border-top: 3px solid $color-grey;
+
+        &--col-1 {
+            border-right: $border-btm;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &--col-1,
+        &--col-2,
+        &--col-3 {
+            padding: 1.5rem 3rem;
+        }
+    }
+}

@@ -1,0 +1,139 @@
+.navsearch {
+    height: 9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: auto;
+    }
+}
+
+.search {
+    height: 3rem;
+    display: flex;
+
+    border-bottom: $border-btm;
+
+    &__input {
+        border: none;
+        cursor: pointer;
+
+        &::-webkit-input-placeholder,
+        &:-moz-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder,
+        &::placeholder {
+            color: $color-black;
+        }
+    }
+
+    &__button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin: 1rem 0;
+    }
+}
+
+.logo {
+    width: 17%;
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+        margin: 3rem 0;
+        order: -1;
+        width: 30%;
+    }
+}
+
+.cart {
+    height: 4rem;
+    display: flex;
+    align-items: flex-end;
+
+    &__signin {
+        @include link;
+        margin-right: 1rem;
+    }
+
+    &__iconbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin: 1rem 0;
+    }
+}
+
+.dropdown {
+    position: relative;
+
+    &:hover .dropdown__content {
+        display: block;
+    }
+
+    &__content {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        z-index: 10;
+        background-color: $color-white;
+        width: 40rem;
+
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        padding: 3rem;
+        box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    }
+
+    &__title {
+        font-family: $font-title;
+        font-size: 2rem;
+    }
+
+    &__item {
+        @include cart-flex;
+        border-bottom: $border-btm;
+
+        &--img,
+        &--text {
+            margin-right: 2rem;
+        }
+    }
+
+    &__subtotal {
+        @include cart-flex;
+    }
+
+    &__btn a {
+        text-decoration: none;
+        color: $color-white;
+    }
+
+    &__btn {
+        @include btn;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        align-self: flex-end;
+    }
+}
+
+.title-1 {
+    @include title-1;
+}
+
+.title-2 {
+    @include title-2;
+}

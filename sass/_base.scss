@@ -1,0 +1,101 @@
+// COLOR VARIABLES
+$color-white: #fefefe;
+$color-grey: #c4c4c4;
+$color-black: #000;
+
+// FONT VARIABLES
+$font-text: 'Open Sans', sans-serif;
+$font-title: 'Libre Baskerville', serif;
+
+// LAYOUT VARIABLES
+$border-btm: 1px solid $color-grey;
+
+// MIXINS
+@mixin title-1 {
+    font-family: $font-title;
+    font-style: italic;
+}
+
+@mixin title-2 {
+    font-family: $font-title;
+    font-weight: 700;
+}
+
+@mixin cart-flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+@mixin btn {
+    background-color: $color-black;
+    color: $color-white;
+    border: none;
+    height: 4rem;
+    letter-spacing: 0.1rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+@mixin link {
+    text-decoration: none;
+    color: $color-black;
+}
+
+@mixin section {
+    text-transform: uppercase;
+    font-family: $font-title;
+    letter-spacing: 0.2rem;
+    height: 4rem;
+    margin-bottom: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// RESPONSIVE BREAKPOINTS
+// $bp-largest: 81.25em; // 1300px / 16px
+// $bp-large: 68.75em; // 1100px
+// $bp-medium-large: 60.625em; // 970px
+// $bp-medium: 50em; // 800px
+// $bp-small: 37.5em; // 600px
+
+$bp-largest: 75em; // 1200px / 16px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px / 16px = 62.5% -> 1rem = 10px
+
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-text;
+    color: $color-black;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: [full-start] 10% [center-start] 1fr [center-end] 10% [full-end];
+
+    &__center {
+        grid-column: center-start / center-end;
+    }
+}

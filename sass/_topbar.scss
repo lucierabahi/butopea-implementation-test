@@ -1,0 +1,23 @@
+.topbar {
+    grid-column: full-start / full-end;
+    background-color: $color-grey;
+    color: $color-white;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // Sticky
+    position: sticky;
+    top: 0;
+    z-index: 30;
+
+    &__text {
+        &--link {
+            color: $color-white;
+        }
+    }
+}

@@ -28,6 +28,11 @@
     &:hover .shop__content {
         display: grid;
         grid-template-columns: repeat(3, max-content);
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, max-content);
+        }
     }
 
     &__content {
@@ -44,6 +49,10 @@
         line-height: 2.5;
         padding: 1rem 0 3rem 0;
         border-top: 3px solid $color-grey;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.1rem;
+        }
 
         &--col-1 {
             border-right: $border-btm;

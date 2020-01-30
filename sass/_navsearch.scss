@@ -95,20 +95,38 @@
         letter-spacing: 0.1rem;
         padding: 3rem;
         box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+
+        @media only screen and (max-width: $bp-small) {
+            width: 20rem;
+            font-size: 1.1rem;
+        }
     }
 
     &__title {
         font-family: $font-title;
         font-size: 2rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.6rem;
+        }
     }
 
     &__item {
         @include cart-flex;
         border-bottom: $border-btm;
 
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+        }
+
         &--img,
         &--text {
             margin-right: 2rem;
+
+            @media only screen and (max-width: $bp-small) {
+                margin-right: 0;
+                margin-bottom: 1.5rem;
+            }
         }
     }
 
@@ -123,6 +141,10 @@
 
     &__btn {
         @include btn;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.1rem;
+        }
     }
 
     @media only screen and (max-width: $bp-small) {

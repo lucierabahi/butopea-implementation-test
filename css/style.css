@@ -132,6 +132,10 @@ body {
   position: sticky;
   top: 0;
   z-index: 30; }
+  @media only screen and (max-width: 37.5em) {
+    .topbar {
+      height: 4rem;
+      padding: 0 1rem; } }
   .topbar__text--link {
     color: #fefefe; }
 
@@ -206,16 +210,30 @@ body {
     letter-spacing: 0.1rem;
     padding: 3rem;
     box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3); }
+    @media only screen and (max-width: 37.5em) {
+      .dropdown__content {
+        width: 20rem;
+        font-size: 1.1rem; } }
   .dropdown__title {
     font-family: "Libre Baskerville", serif;
     font-size: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .dropdown__title {
+        font-size: 1.6rem; } }
   .dropdown__item {
     display: flex;
     justify-content: space-between;
     padding: 2rem 0;
     border-bottom: 1px solid #c4c4c4; }
+    @media only screen and (max-width: 37.5em) {
+      .dropdown__item {
+        flex-direction: column; } }
     .dropdown__item--img, .dropdown__item--text {
       margin-right: 2rem; }
+      @media only screen and (max-width: 37.5em) {
+        .dropdown__item--img, .dropdown__item--text {
+          margin-right: 0;
+          margin-bottom: 1.5rem; } }
   .dropdown__subtotal {
     display: flex;
     justify-content: space-between;
@@ -234,6 +252,9 @@ body {
     border-radius: 3px;
     cursor: pointer;
     text-transform: uppercase; }
+    @media only screen and (max-width: 37.5em) {
+      .dropdown__btn {
+        font-size: 1.1rem; } }
   @media only screen and (max-width: 37.5em) {
     .dropdown {
       align-self: flex-end; } }
@@ -269,6 +290,10 @@ body {
   .shop:hover .shop__content {
     display: grid;
     grid-template-columns: repeat(3, max-content); }
+    @media only screen and (max-width: 37.5em) {
+      .shop:hover .shop__content {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, max-content); } }
   .shop__content {
     display: none;
     position: absolute;
@@ -282,6 +307,9 @@ body {
     line-height: 2.5;
     padding: 1rem 0 3rem 0;
     border-top: 3px solid #c4c4c4; }
+    @media only screen and (max-width: 37.5em) {
+      .shop__content {
+        font-size: 1.1rem; } }
     .shop__content--col-1 {
       border-right: 1px solid #c4c4c4;
       display: flex;
@@ -384,7 +412,11 @@ body {
       margin-bottom: 3rem; }
       @media only screen and (max-width: 37.5em) {
         .product__content--9 {
-          width: 35%; } }
+          width: 35%;
+          font-size: 1.1rem; } }
+    .product__content--9 a {
+      text-decoration: none;
+      color: #fefefe; }
     .product__content--10 {
       display: flex;
       justify-content: start;
@@ -422,6 +454,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 37.5em) {
+      .more__title {
+        height: 2rem;
+        margin-bottom: 0; } }
   .more__items {
     grid-row: 2 / 3; }
     .more__items--1 {
@@ -454,7 +490,7 @@ body {
   @media only screen and (max-width: 37.5em) {
     .items > img {
       width: 75%;
-      margin: 0 auto; } }
+      margin-bottom: 2rem; } }
 
 .items {
   text-transform: uppercase;
@@ -472,6 +508,9 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 7rem; }
+  @media only screen and (max-width: 37.5em) {
+    .reviews {
+      margin-bottom: 4rem; } }
   .reviews__title {
     text-transform: uppercase;
     font-family: "Libre Baskerville", serif;
@@ -499,7 +538,8 @@ body {
     width: 20%; }
     @media only screen and (max-width: 37.5em) {
       .reviews__btn {
-        width: 35%; } }
+        width: 35%;
+        font-size: 1.1rem; } }
   .reviews__btn > a {
     text-decoration: none;
     color: #fefefe; }
@@ -526,6 +566,9 @@ body {
     clear: both;
     height: 0;
     margin-bottom: 7rem; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__separation {
+        margin-bottom: 0; } }
   .footer__col-1--title, .footer__col-2--title, .footer__col-3--title {
     border-bottom: 3px solid #000;
     margin-bottom: 2rem; }

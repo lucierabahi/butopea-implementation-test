@@ -23,6 +23,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media only screen and (max-width: $bp-small) {
+            height: 2rem;
+            margin-bottom: 0;
+        }
     }
 
     &__items {
@@ -71,7 +76,7 @@
 
     @media only screen and (max-width: $bp-small) {
         width: 75%;
-        margin: 0 auto;
+        margin-bottom: 2rem;
     }
 }
 

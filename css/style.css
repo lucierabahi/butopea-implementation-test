@@ -175,7 +175,7 @@ body {
     .logo {
       margin: 3rem 0;
       order: -1;
-      width: 30%; } }
+      width: 40%; } }
 
 .cart {
   height: 4rem;
@@ -275,6 +275,10 @@ body {
   align-items: center;
   border-bottom: 1px solid #c4c4c4;
   border-top: 1px solid #c4c4c4; }
+  @media only screen and (max-width: 37.5em) {
+    .navmenu__list {
+      flex-direction: column;
+      height: auto; } }
   .navmenu__list--item {
     list-style: none;
     text-transform: uppercase;

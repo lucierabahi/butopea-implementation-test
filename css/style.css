@@ -297,10 +297,6 @@ body {
   align-items: center;
   border-bottom: 1px solid #c4c4c4;
   border-top: 1px solid #c4c4c4; }
-  @media only screen and (max-width: 37.5em) {
-    .navmenu__list {
-      flex-direction: column;
-      height: auto; } }
   .navmenu__list--item {
     list-style: none;
     text-transform: uppercase;
@@ -347,6 +343,67 @@ body {
       justify-content: space-between; }
     .shop__content--col-1, .shop__content--col-2, .shop__content--col-3 {
       padding: 1.5rem 3rem; }
+
+#toggle,
+.toggle {
+  display: none; }
+
+@media only screen and (max-width: 37.5em) {
+  .menu {
+    display: none;
+    opacity: 0;
+    width: 70%;
+    position: absolute; }
+  .menu > li {
+    display: block;
+    width: 100%;
+    margin: 0; }
+  .menu > li > a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .toggle {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none; }
+  #toggle:checked + div .menu {
+    display: block;
+    opacity: 1; } }
+
+@media only screen and (max-width: 37.5em) {
+  .menu {
+    background: #fefefe;
+    margin: 0;
+    border-top: none;
+    border-bottom: none;
+    padding: 1rem;
+    line-height: 2; }
+  .menu,
+  .menu > li,
+  .menu > li > a {
+    height: auto; }
+  .toggle:after {
+    content: attr(data-open);
+    display: block;
+    padding: 1rem 2rem;
+    background: #c4c4c4;
+    color: #000;
+    text-align: center;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-shadow: none;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear; }
+  .toggle:hover:after {
+    background: #c4c4c4; }
+  #toggle:checked + div .toggle:after {
+    content: attr(data-close); } }
 
 .breadcrumbs {
   font-size: 1.2rem;
@@ -617,6 +674,9 @@ body {
   font-size: 1.2rem;
   margin-bottom: 10rem;
   letter-spacing: 0.2rem; }
+  @media only screen and (max-width: 75em) {
+    .footer {
+      grid-template-columns: 1rem [footer-start] repeat(3, 3fr) [footer-end] 1rem; } }
   @media only screen and (max-width: 62.5em) {
     .footer {
       grid-template-columns: [footer-start] repeat(2, 3fr) [footer-end];

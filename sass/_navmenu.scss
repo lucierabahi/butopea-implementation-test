@@ -8,10 +8,10 @@
         border-bottom: $border-btm;
         border-top: $border-btm;
 
-        @media only screen and (max-width: $bp-small) {
-            flex-direction: column;
-            height: auto;
-        }
+        // @media only screen and (max-width: $bp-small) {
+        //     flex-direction: column;
+        //     height: auto;
+        // }
 
         &--item {
             list-style: none;
@@ -77,5 +77,88 @@
         &--col-3 {
             padding: 1.5rem 3rem;
         }
+    }
+}
+
+// RESPONSIVE NAVBAR
+#toggle,
+.toggle {
+    display: none;
+}
+
+@media only screen and (max-width: $bp-small) {
+    .menu {
+        display: none;
+        opacity: 0;
+        width: 70%;
+        position: absolute;
+    }
+
+    .menu > li {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    .menu > li > a {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .toggle {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #toggle:checked + div .menu {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: $bp-small) {
+    .menu {
+        background: $color-white;
+        margin: 0;
+        border-top: none;
+        border-bottom: none;
+        padding: 1rem;
+        line-height: 2;
+    }
+
+    .menu,
+    .menu > li,
+    .menu > li > a {
+        height: auto;
+    }
+
+    .toggle:after {
+        content: attr(data-open);
+        display: block;
+        padding: 1rem 2rem;
+        background: $color-grey;
+        color: $color-black;
+        text-align: center;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        text-shadow: none;
+        -o-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+    }
+
+    .toggle:hover:after {
+        background: $color-grey;
+    }
+
+    #toggle:checked + div .toggle:after {
+        content: attr(data-close);
     }
 }
